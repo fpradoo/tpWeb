@@ -210,6 +210,20 @@ center.logo>a>h1.in {
 
 /*FIN header para contacto y galería*/
 
+/* galeria: NOVEDAD */
+
+div.descripcion>h1.novedad {
+    text-align: center;
+    color: #40d2f3;
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+div.descripcion.novedad {
+    margin: 1em auto 3em auto;
+}
+
+/* FIN galeria: NOVEDAD */
 
 /*INICIO GALERÍA*/
 div.descripcion {
