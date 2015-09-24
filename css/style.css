@@ -21,25 +21,25 @@ div.header{
 	background-size: cover;
 }
 
-div.logo {
-	display: inline-block;
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
+center.logo {
+	padding-top: 40px;
 }
 
+center.logo>a>h1 {
+    color: white;
+    background-color: #ff3f40;
+    position: relative;
+    border-radius: 2em;
+    max-width: 8em;
+    padding: 0.3em 1em;
+    font-weight: normal;
+    z-index: 2000;
+    letter-spacing: 0.1em;
+    margin-top: -55px;
+}
 
-div.logo>a>h1 {
-	color: white;
-	background-color: #ff3f40;
-	position: absolute;
-	border-radius: 2em;
-	left: 38.5%;
-	width: 8em;
-	padding: 0.3em 1em;
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	margin-top: -55px;
+center.logo>a>h1:hover {
+	background-color: #ff8340;
 }
 
 div.logo>img {
@@ -53,17 +53,30 @@ div.menu{
 
 ul.contacto {
     display: inline-block;
-	color: #ff3f40;
+	color: #e700b7;
+	font-weight: bold;
 }
 
-ul.contacto.select {
+ul.contacto:hover{
+	color: #e786b7;
+}
+
+ul.menu-izq>li, ul.menu-der>li{
+	display: inline-block;
+	color: #ff3f40;
+	margin: 0em 1.5em;
+}
+
+ul.menu-der {
 	float: right;
 }
 
-select{
-	margin-left: 0.5em;
-	border: solid 1px #ccc;
-	cursor: pointer;
+ul.menu-izq{
+	margin-left: 6em;
+}
+
+ul.menu-izq>li:hover, ul.menu-der>li:hover {
+	color: #ccc;
 }
 
 h1.title{
@@ -96,21 +109,31 @@ li.fer{
 
 div.main {
     width: 100%;
+    margin-bottom: 4em;
 }
 
 div.novedades {
-    width: 1211px;
+    width: 89%;
     display: inline-block;
     margin: 0 69px;
     margin-bottom: 4em;
 }
 
 div.producto {
-	width: 240px;
-	display: inline-block;
-	margin: 10px 15px;
-	padding: 15px;
-	background-color: #ff3f40;
+    width: 20.5%;
+    min-width: 20%;
+    display: inline-block;
+    margin: 0% 1%;
+    padding: 1%;
+    background-color: #ff3f40;
+}
+
+div.novedades>a:hover div.producto {
+    background-color: #ff8340;
+}
+
+div.producto>img {
+    width: 100%;
 }
 
 div.descripcion-novedades{
@@ -147,17 +170,18 @@ div.descripcion-novedades>h2>span {
 
 }
 
-div.producto>h1.destacado{
-	padding: 0.2em 0.8em;
-	color: white;
-	text-align: center;
-	width: 5em;
-	border-radius: 2em;
-	text-transform: uppercase;
-	font-size: 1.8em;
-	margin-left: 0.75em;
-	margin-top: -28px;
-	position: absolute;
+div.producto>h1.destacado {
+    padding: 0.5% 1%;
+    color: white;
+    text-align: center;
+    border-radius: 2em;
+    margin: 0 auto;
+    width: 13%;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin-left: 20px;
+    margin-top: -28px;
+    position: absolute;
 }
 
 div.producto>h1.destacado.cyan{
@@ -180,8 +204,8 @@ div.header-in{
 	background-position-y: -11em;
 }
 
-div.logo>a>h1.in {
-    margin-top: 0;
+center.logo>a>h1.in {
+    margin-top: -17px;
 }
 
 /*FIN header para contacto y galería*/
@@ -201,8 +225,7 @@ div.descripcion>h1{
 div.descripcion>img{
 	background-color: #ff3f40;
 	padding: 0.5em;
-	/*max-width: 100%;*/
-	min-width: 44%;
+    max-width: 44%;
 }
 
 div.informacion{
@@ -255,6 +278,7 @@ h3.preTitulo{
     font-size: 130%;
     margin-top: 1.5em;
     text-align: center;
+	font-weight: bold;
 }
 
 .cleanMargin{
@@ -266,12 +290,13 @@ h3.preTitulo{
 }
 
 div.formulario>form>div>div>input{
-	border: thin solid black;
+	border: solid 2px #7c7c7c;
 	width: 58%;
 }
 div.formulario>form>div>textarea{
-	border: thin solid black;
+	border: solid 2px #7c7c7c;
 	width:82%;
+	min-height: 5em;
 }
 
 div.formulario>form>div{
@@ -297,6 +322,7 @@ div.formulario>form>div>div>span{
     text-align: left;
     text-transform: uppercase;
     width: 33%;
+	font-weight: bold;
 }
 
 div.formulario>form>div>span{
@@ -305,22 +331,26 @@ div.formulario>form>div>span{
     text-align: left;
     text-transform: uppercase;
     width: 16%;
-	float: top;
+	font-weight: bold;
 }
 
-div.formulario>form>input{
+div.formulario>form>input {
     background-color: #ff3f40;
-    border-radius: 20px;
+    border-radius: 2em;
     color: white;
     float: left;
-    margin-left: 167px;
+    margin-left: 166px;
     text-transform: uppercase;
-    width: 58px;
+    max-width: 100%;
+    padding: 0.5em 1em;
+	cursor: pointer;
+	border: solid 2px white;
 }
 
 div.formulario>form>input:hover{
     background-color: white;
     color: #ff3f40;
+	border: solid 2px #ff3f40;
 }
 
 div.formulario>form>input.clean{
@@ -332,7 +362,7 @@ div.formulario>form>button.clean{
     color: #ff3f40;
 }
 
-center{
+center.contacto{
 	margin-top: 68px;
 }
 
