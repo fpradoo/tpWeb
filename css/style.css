@@ -49,7 +49,7 @@ div.header{
 	background-color: #873188;
 	max-width: 100%;
 	height: 1.8em;
-	padding: 0.5em 3em;
+	padding: 0.5em 1em;
 	position: relative;
 	z-index: 1000;
 }
@@ -58,12 +58,8 @@ div.header>a>img{
 	max-width: 8em;
 }
 
-div.header>a>h1{
-	color: #F2F2F2;
-	font-size: 1.2em;
-	display: inline-block;
-	margin-left: 0.5em;
-	text-transform: uppercase;;
+div.header>a>h1 {
+    display: none;
 }
 
 div#menuIndex {
@@ -115,7 +111,7 @@ div#menuIndex>div{
 
 /*MAIN*/
 div.main {
-	margin: 0em 3em;
+	margin: 0em 1em;
 }
 
 div#slider {
@@ -134,9 +130,6 @@ div.section>ul {
 
 div.section>ul.tutoriales {
     margin: 1em 0em;
-}
-
-div.section>ul.noticias{
 }
 
 div.section>ul.extra {
@@ -206,25 +199,32 @@ ul.promo, ul.redes, ul.articulo, ul.tutoriales{
     -moz-box-shadow: -3px 4px 2px #EFEFEF;
 }
 
+ul.redes>li:hover {
+    opacity: 0.7;
+}
+
 /*FIN MAIN*/
 
 /*FOOTER*/
 div.footer {
 	background-color: white;
 	margin-top: 2em;
-	width: 100%;
+	width: 76%;
 	display: inline-block;
+	padding: 12%;
 }
 
 div.footer>ul {
 	color: #656565;
+	margin: 1em 0em;
+	text-align: center;
 }
 
 div.footer>ul>p {
 	padding-bottom: 0.5em;
 	text-transform: uppercase;
 	width: 7em;
-	/*margin: 0 auto;*/
+	margin: 0 auto;
 	border-bottom: solid 1px #656565;
 	margin-bottom: 0.5em;
 }
@@ -240,6 +240,14 @@ div.footer>ul>li>a {
 /*FIN FOOTER*/
 
 @media screen and (min-width: 30em) {
+div.header{
+	padding: 0.5em 3em;
+}
+
+div.main {
+	margin: 0em 3em;
+}
+
 li.video>img {
 	width: 50%;
 }
@@ -250,7 +258,43 @@ li.video>p {
 	float: right;
 }
 
+div.footer {
+    width: 90%;
+    padding: 5%;
+}
 
+div.footer>ul {
+	width: 50%;
+	float: left;
+}
+}
+
+@media screen and (min-width: 55em) {
+div.header>a>h1{
+	color: #F2F2F2;
+	font-size: 1.2em;
+	display: inline-block;
+	margin-left: 0.5em;
+	text-transform: uppercase;;
+}
+
+div.section>ul {
+    max-width: 30%;
+}
+
+div.section>ul.tutoriales {
+    margin: 0em 0.8%;
+}
+
+div.footer {
+    width: 95%;
+    padding: 2.5%;
+}}
+
+@media screen and (min-width: 75em) {
+div.section>ul.tutoriales {
+    margin: 0em 2%;
+}
 }
 
 
