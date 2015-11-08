@@ -114,7 +114,8 @@ div.main {
 	margin: 0em 1em;
 }
 
-div#slider {
+
+div#slider { /* slider */
     margin: 2em 0em;
 }
 
@@ -122,7 +123,7 @@ div#slider>ul>li>img {
     width: 100%;
 }
 
-div.section>ul {
+div.section>ul { /* secciones- Noticias, Tutoriales y Extras */
 	float: left;
 	background-color: white;
 	padding: 1em;
@@ -137,7 +138,22 @@ div.section>ul.extra {
 	padding: 0;
 }
 
-ul.redes, ul.promo {
+li.video>p{
+	color: #4C4C4C;
+}
+
+ul.promo, ul.redes, ul.articulo, ul.tutoriales{
+    box-shadow: -3px 4px 2px #EFEFEF;
+    -webkit-box-shadow: -3px 4px 2px #EFEFEF;
+    -moz-box-shadow: -3px 4px 2px #EFEFEF;
+}
+
+ul>a:hover { 
+    opacity: 0.8;
+    display: inline-block;
+}
+
+ul.redes, ul.promo { /* secciones- Extras (promociones) */
     background-color: white;
     padding: 1em;
 }
@@ -146,7 +162,28 @@ ul.promo{
 	margin: 1em 0em;
 }
 
-li.articulo{
+ul.redes>li { /* secciones- Extras (redes sociales) */
+	display: inline-block;
+	max-width: 26%;
+}
+
+ul.redes>li.in{
+	margin: 0% 8.5%;
+}
+
+ul.redes>li>a>img{
+	width: 100%;
+}
+
+ul.promo>img {
+	width: 100%;
+}
+
+ul.redes>li:hover {
+    opacity: 0.7;
+}
+
+li.articulo{ /* secciones- Noticias */
 	padding-bottom: 1em;
 	border-bottom: solid 1px #873188;
 }
@@ -167,40 +204,13 @@ li.articulo>p{
 	color: #4C4C4C;
 }
 
-li.video {
+li.video { /* secciones- Tutoriales */
 	margin: 1em 0em;
 	display: inline-block;
 }
 
 li.video>img {
 	width: 100%;
-}
-
-ul.redes>li {
-	display: inline-block;
-	max-width: 26%;
-}
-
-ul.redes>li.in{
-	margin: 0% 8.5%;
-}
-
-ul.redes>li>a>img{
-	width: 100%;
-}
-
-ul.promo>img {
-	width: 100%;
-}
-
-ul.promo, ul.redes, ul.articulo, ul.tutoriales{
-    box-shadow: -3px 4px 2px #EFEFEF;
-    -webkit-box-shadow: -3px 4px 2px #EFEFEF;
-    -moz-box-shadow: -3px 4px 2px #EFEFEF;
-}
-
-ul.redes>li:hover {
-    opacity: 0.7;
 }
 
 /*FIN MAIN*/
