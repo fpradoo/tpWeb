@@ -133,7 +133,6 @@ div.section>ul {
 }
 
 div.section>ul.tutoriales {
-    margin: 1em 0em;
 }
 
 div.section>ul.noticias{
@@ -175,12 +174,14 @@ li.articulo>p{
 }
 
 li.video {
-	margin: 1em 0em;
-	display: inline-block;
+    margin: 1em 0em;
 }
 
 li.video>img {
-	width: 100%;
+}
+
+li.video>p {
+	float: right;
 }
 
 ul.redes>li {
@@ -211,12 +212,15 @@ ul.promo, ul.redes, ul.articulo, ul.tutoriales{
 /*FOOTER*/
 div.footer {
 	background-color: white;
+	padding: 3em 6em;
 	margin-top: 2em;
-	width: 100%;
-	display: inline-block;
+	max-width: 100%;
+	height: 7em;
 }
 
 div.footer>ul {
+	/*text-align: center;*/
+	float: left;
 	color: #656565;
 }
 
@@ -238,20 +242,6 @@ div.footer>ul>li>a {
 	text-align: left;
 }
 /*FIN FOOTER*/
-
-@media screen and (min-width: 30em) {
-li.video>img {
-	width: 50%;
-}
-
-li.video>p {
-	max-width: 45%;
-	display: inline-block;
-	float: right;
-}
-
-
-}
 
 
 /*SLIDER*/
