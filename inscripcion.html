@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset= utf-8 "/>
+		<title>Capinfo - Instituto de Capacitación Informática</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="header" >
+			<a href="index.html">
+				<img title="CAPINFO - Instituto de Capacitación Informática" src="img/logo.png"/>
+				<h1>Instituto de Capacitación Informática</h1>
+			</a>
+			<div id="menuIndex" style='display:none'><div>z</div>
+				<ul>
+					<li><a href="#">Historia</a></li>
+					<li><a href="#">Cursos</a></li>
+					<li><a href="#">Inscripciones</a></li>
+					<li class="contacto"><a href="#"><span>b</span>Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+		<h1 class='titleInscripciones'>Inscripciones</h1>
+		<div class='formularios'>
+			<div class='curso'>
+				<select onchange='mostrarCurso(this.value)'>
+					<option value="">Seleccione un curso</option>
+					<option value="curso1">Curso 1</option>
+					<option value="curso2">Curso 2</option>
+					<option value="curso3">Curso 3</option>
+				</select>
+				<div id='curso1'> 
+					<p class='primerTexto'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+					</p>
+					<h2>
+						$500
+					</h2>
+					<p>
+						10 Clases | 4 Horas x día
+					</p>
+				</div>
+				<div id='curso2'> 
+					<p class='primerTexto'>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+					</p>
+					<h2>
+						$400
+					</h2>
+					<p>
+						8 Clases | 3 Horas x día
+					</p>
+				</div>
+				<div id='curso3'> 
+					<p class='primerTexto'> 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					</p>
+					<h2>
+						$300
+					</h2>
+					<p>
+						6 Clases | 2 Horas x día
+					</p>
+				</div>				
+			</div>
+			<div class='datos'>
+				<form>
+					<label id=''>Nombre y apellido del alumno</label>
+					<input id='' type='text' />
+					<label id=''>Dni</label>
+					<input id='' type='text' />
+					<label id=''>E-mail</label>
+					<input id='' type='text' />
+					<label id=''>Contraseña</label>
+					<input id='' type='password' />
+					<div class='checkDiv'>
+						<input id="cb" type="checkbox" style="float: left; margin-top: 5px;>">
+						<div class='textoCheck'>
+							&nbsp;&nbsp;Acepto los términos y condiciones del sitio.
+						</div>
+					</div>
+					<div class='divBotones'>  
+						<input id='' type='button' value='Enviar' />
+						<input id='' type='reset' value='Limpiar' />
+					</div>
+					
+					
+				</form>
+			</div>
+			<div class='medioDePago'>
+				<select onchange='mostrarMedioDePago(this.value)'>
+					<option value="">Seleccione un medio de pago</option>
+					<option value="tarjeta">Tarjeta de credito</option>
+					<option value="efectivo">Efectivo</option>
+				</select>
+				<label id='tarjetaCreditoLabel'>Número de tarjeta</label>
+				<input id='tarjetaCreditoInput' type='text' />
+				<p id='efectivo'>Abonara el curso el primer día de clases</p>	
+			</div>
+		</div>
+		
+		<div class="footer" style='display:none'>
+			<ul>Derechos reservados.</ul>
+			
+			<ul>
+			<p>Mapa del sitio</p>
+				<li><a href="#">Historia</a></li>
+				<li><a href="#">Cursos</a></li>
+				<li><a href="#">Inscripciones</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
