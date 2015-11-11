@@ -249,6 +249,178 @@ div.footer>ul>li>a {
 }
 /*FIN FOOTER*/
 
+/* HISTORIA */
+
+div.section {
+    width: 90%;
+    margin: 0% 5%;
+    color: #4C4C4C;
+}
+
+div.fotoLeft {
+    max-width: 100%;
+}
+
+img.fotoHistoria {
+    max-width: 100%;
+}
+
+div.info div h2 {
+    font-size: 2.3em;
+	margin-bottom: 0.1em;
+}
+
+div.info div p{
+	font-size: 1.2em;
+	line-height: 1.1em;
+    margin-bottom: 1em;
+}
+
+div.items {
+    margin-top: 0.5em;
+}
+
+div.items ul {
+    margin-left: 1.25em;
+}
+
+div.items ul li{
+	list-style-type: disc;
+	font-size: 1.2em;
+}
+
+/*Fin HISTORIA*/
+
+/*INSCRIPCIONES*/
+h1.titleInscripciones {
+    margin-top: 1em;
+    color: #4C4C4C;
+    font-size: 2.5em;
+}
+
+p.aclaracion{
+	margin-bottom: 1.5em;
+	margin-top: 0.5em;
+}
+
+.formularios {
+    display: inline-block;
+}
+
+.formularios>div{
+	background-color: white;
+	padding: 1em;
+	margin: 0.5em 0em;
+}
+
+select {
+    border: solid 3px #4C4C4C;
+    margin-bottom: 1em;
+    width: 100%;
+    float: left;
+    clear: both;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4C4C4C;
+}
+
+.curso {
+    max-width: 100%;
+    min-height: 1.5em;
+}
+
+.curso>div{
+	display:none;
+}
+
+div.curso>div>p {
+    color: #873188;
+}
+
+div.curso>div>p.primerTexto {
+    width: 80%;
+    font-size: 1.1em;
+    margin: 0.5em 0em;
+    display: inline-block;
+	color: #4C4C4C;
+}
+
+div.curso>div>h2 {
+    font-size: 2.5em;
+    color: #EA7006;
+    margin-top: 0.5em;
+}
+
+.datos>form>label{
+    clear: both;
+    max-width: 100%;
+    display: block;
+}
+
+.datos>form>input{
+    float: left;
+    margin-bottom: 0.8em;
+    border: solid 3px #4C4C4C;
+    width: 98%;
+}
+
+.checkDiv {
+    margin: 1em 0em;
+    display: inline-block;
+    width: 100%;
+}
+
+.divBotones {
+    height: 2.2em;
+	margin-top: 0.7em;
+}
+
+.divBotones>input {
+    padding: 0.5em 1em;
+    border: 2px solid #873188;
+    width: 48%;
+    float: left;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.divBotones>input[type="button"] {
+    background-color: #873188;
+    color: white;
+    margin-right: 4%
+}
+
+.divBotones>input[type="reset"] {
+    background-color: transparent;
+    color: #873188;
+}
+
+input#tarjetaCreditoInput {
+    border: solid 3px #4C4C4C;
+	width: 70%;
+}
+
+p#efectivo {
+    margin-top: 0.5em;
+}
+
+.medioDePago>label{
+	float:left;
+	clear:both;
+	display:none;
+}
+
+.medioDePago>input{
+	display:none;
+}
+
+.medioDePago>p{
+	display:none;
+}
+/*FIN INSCRIPCIONES*/
+
+
+/*Responsive*/
 @media screen and (min-width: 30em) {
 div.header{
 	padding: 0.5em 3em;
@@ -299,7 +471,44 @@ div.section>ul.tutoriales {
 div.footer {
     width: 95%;
     padding: 2.5%;
-}}
+}
+
+/*INSCRIPCIONES*/
+p.aclaracion{
+	width: 70%;
+}
+
+.formularios>div {
+    width: 27%;
+    float: left;
+    margin: 0 1%;
+}
+/*Fin INSCRIPCIONES*/
+}
+
+@media screen and (min-width: 65em) {
+/*HISTORIA*/
+div.fotoLeft {
+    width: 45%;
+	display: inline-block;
+}
+
+img.fotoHistoria {
+    width: 95%;
+}
+
+div.info {
+    float: right;
+    width: 55%;
+}
+
+div.items ul{
+	width: 46%;
+	float: left;
+	margin-left: 4%;
+}
+/*Fin HISTORIA*/
+}
 
 @media screen and (min-width: 75em) {
 div.section>ul.tutoriales {
@@ -310,8 +519,9 @@ div.section>ul.tutoriales {
 
 /*SLIDER*/
 div#slider {
-    width: 100%;
-	overflow: hidden;
+    width: 90%;
+    overflow: hidden;
+    margin: 1em auto;
 }
 
 div#slider>ul {
@@ -338,170 +548,4 @@ div#slider>ul li {
 	75%{margin-left: -300%;}
 	100%{margin-left: -300%;}
 }
-
-/*** historia ***/
-
-.fotoLeft{
-	margin-left:100px;
-	width:30%;
-	float:left;
-	margin-right:30px;
-	margin-top:50px;
-}
-
-.info{
-	float:left;
-	width:50%;
-	margin-right:100px;
-	margin-top:50px;
-}
-
-.fotoHistoria{
-	width:410px;
-	height:350px;
-}
-
-.info>div{
-	margin-bottom:28px;
-}
-
-.ultimoDiv{
-	display:inline-block;
-}
-
-.ultimoDiv>div{
-	float:left;
-	margin-top:10px;
-	margin-right:100px;
-}
-
-/*** FIN HISTORIA ***/
-
-/*** INSCRIPCIONES ***/
-
-.titleInscripciones{
-	margin-top:25px;
-	margin-left:50px;	
-}
-
-.formularios{
-	margin-left:100px;
-	margin-right:100px;
-}
-
-.formularios>div{
-	float:left;
-	border: solid 1px #000000;
-	padding-left:15px;
-	padding-top:15px;
-}
-
-.curso{
-	width:250px;
-	margin-right:29px;	
-}
-.datos{
-	width:450px;
-	margin-right:29px;
-}
-.medioDePago{
-	width:250px;
-}
-
-select{
-	border: solid 4px #000000;
-	margin-bottom:20px;
-	width:85%;
-	float:left;
-	clear:both;
-}
-.curso>div{
-	margin-top:20px;
-	display:none;
-}
-
-.curso>div>h2{
-	color:orange;
-}
-
-.curso>div>.primerTexto{
-	color:black;
-	padding-bottom:10px;
-	float:left;
-}
-
-.curso>div>p{
-	color:fuchsia;
-	padding-bottom:10px;
-}
-
-.datos>form>label{
-	float:left;
-	clear:both;
-	padding-bottom:10px;
-}
-
-.datos>form>input{
-	float:left;
-	clear:both;
-	margin-bottom:15px;
-	border: solid 4px #000000;
-	width:80%;
-}
-
-.divBotones{
-	display:inline-block;
-	float:left;
-	clear:both;
-	width:100%;
-}
-
-.divBotones>input{
-	float:left;
-	width:30%;
-	margin-right:80px;
-	border: solid 4px #000000;
-	margin-top:15px;
-	margin-bottom:10px;
-	margin-left:10px;
-}
-
-.checkDiv{
-	display:inline-block;
-	float:left;
-	clear:both;
-}
-
-.checkDiv>input{
-	float:left;
-}
-
-.checkDiv>div{
-	float:left;
-}
-
-.medioDePago>label{
-	float:left;
-	clear:both;
-	display:none;
-}
-
-.medioDePago>input{
-	float:left;
-	clear:both;
-	margin-top:10px;
-	border: solid 4px #000000;
-	display:none;
-	margin-bottom:10px;
-}
-
-.medioDePago>p{
-	float:left;
-	clear:both;
-	margin-top:5px;
-	margin-bottom:20px;
-	display:none;
-}
-
-/*** FIN INSCRIPCIONES ***/
-
+/*FIN SLIDER*/
