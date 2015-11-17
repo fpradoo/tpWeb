@@ -45,3 +45,63 @@ function mostrarMedioDePago(medioDePago){
 	}
 }
 
+function validarFormulario(){
+	var regexp = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+	var letras = /^[a-zA-Z\s]+$/;
+	var numeros = /^[0-9]+$/;
+	
+	var form = document.getElementById('formularioInscripcion');
+	
+	/*Nombre y Apellido*/
+	if(form.nombreApellido.value.length == 0){
+		alert('Debe completar el campo con su Nombre y Apellido.');
+		form.nombre.focus();
+	}else if(!form.nombreApellido.value.match(letras)){
+			alert('Debe completar Nombre y Apellido omitiendo números o caracteres especiales.');
+			form.nombre.focus();		
+		}
+	
+	/*DNI*/
+	if(form.dni.value.length==0){
+		alert('Debe completar el campo con su DNI.');
+		form.dni.focus();
+	}else if(!form.dni.value.match(numeros)){
+			alert('Ingrese solo números.');
+			form.dni.focus();
+		}else if (form.dni.value.lenght<8){
+			alert('Su número tiene menos dígitos de los que se aceptan.');
+			form.dni.focus();
+		}
+		
+	/*Email*/
+	if(form.email.value.lenght==0){
+		alert('Debe completar el campo con su casilla de correo.');
+		form.email.focus();		
+	}else if(!form.email.value.match(regexp)){
+			alert('Su Mail no cumple con el formato.');
+			form.email.focus();
+		}
+	
+	/*Contraseña*/
+	var contrasena = form.contrasena.value;
+	var contrasenaValidar = form.contrasenaValidar.value;
+	if(contrasena.lenght==0){
+		alert('Debe incresar su contraseña.');
+		form.contrasena.focus();		
+	}else if(contrasenaValidar.length == 0){
+		alert('Debe reingresar su contraseña.');
+		form.contrasenaValidar.focus();		
+	}else if(contrasena != contrasenaValidar){
+			alert('Tiene un error en su contraseña.');
+			form.contrasena.focus();
+	}
+	
+	/*Acepto términos y condiciones*/
+	if(document.getElementById("cb").checked == 0){
+		alert('Debe aceptar los términos y condiciones');
+		document.getElementById('cb').focus();
+	}
+	
+	form.submit();
+}
+

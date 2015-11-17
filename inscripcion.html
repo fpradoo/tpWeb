@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8 "/>
 		<title>Capinfo - Instituto de Capacitación Informática</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<script type="text/javascript" src="js/script-flor.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<div class="header" >
@@ -54,24 +54,31 @@
 				</div>				
 			</div>
 			<div class='datos'>
-				<form>
+				<form id="formularioInscripcion" name="form" method="POST" action="">
 					<label id=''>Nombre y apellido del alumno</label>
-					<input id='' type='text' />
+					<input name="nombreApellido" id='' type='text' />
+
 					<label id=''>Dni</label>
-					<input id='' type='text' />
+					<input name="dni" id='' type='text' />
+
 					<label id=''>E-mail</label>
-					<input id='' type='text' />
+					<input name="email" id='' type='text' />
+
 					<label id=''>Contraseña</label>
-					<input id='' type='password' />
+					<input name="contrasena" id='' type='password' />
+
+					<label id=''>Repita la contraseña</label>
+					<input name="contrasenaValidar" id='' type='password' />
+
 					<div class='checkDiv'>
-						<input id="cb" type="checkbox" style="float: left; margin-top: 5px;>">
+						<input name="aceptoTerminos" id="cb" type="checkbox" style="float: left; margin-top: 5px;">
 						<div class='textoCheck'>
 							&nbsp;&nbsp;Acepto los términos y condiciones del sitio.
 						</div>
 					</div>
 					<div class='divBotones'>  
-						<input id='' type='button' value='Enviar' />
-						<input id='' type='reset' value='Limpiar' />
+						<input id='enviar' type='button' value='Enviar' onclick='validarFormulario()' />
+						<input id='limpiar' type='reset' value='Limpiar' />
 					</div>
 					
 					
