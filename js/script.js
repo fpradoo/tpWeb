@@ -46,62 +46,107 @@ function mostrarMedioDePago(medioDePago){
 }
 
 function validarFormulario(){
-	var regexp = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+	
+	/**** EXPRESIONES REGULARES ****/
+	var mail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
 	var letras = /^[a-zA-Z\s]+$/;
 	var numeros = /^[0-9]+$/;
+	var pass = /(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/;
+	
+	/**** FINAL EXPRESIONES REGULARES ****/
+	
+	/**** DEFINICION DE FUNCIONES ****/
+	
+	function validacionNulo(element, nombreCamp){
+		if(element.value.length == 0){
+			alert('El campo '+ nombreCamp + ' no puede estar vacio');
+			element.focus();
+		}		
+	}
+	
+	function validacionLetas(element, nombreCamp){
+		
+		validacionNulo(element, nombreCamp);
+		
+		if(!element.value.match(letras)){
+			alert('El campo '+ nombreCamp + ' no puede contener numeros');
+			element.focus();
+			throw '';
+		}
+		
+	}
+	
+	function validacionNumeros(element, nombreCamp){
+		validacionNulo(element, nombreCamp);
+		
+		if(!element.value.match(numeros)){
+			alert('El campo '+ nombreCamp + ' no puede contener letras');
+			element.focus();
+			throw '';
+		}
+		
+	}	
+	
+	function validacionMail(element, nombreCamp){
+		validacionNulo(element, nombreCamp);
+		
+		if(!element.value.match(mail)){
+			alert('El campo '+ nombreCamp + ' no cumple con el formato esperado');
+			element.focus();
+			throw '';
+		}
+	}
+	
+	function validacionPassword(element, secondElement, nombreCamp, nombreSegundoCampo){
+		validacionNulo(element, nombreCamp);
+		
+		if(!element.value.match(pass)){
+			alert('El campo '+ nombreCamp + ' no cumple con el formato esperado');
+			element.focus();
+			throw '';
+		}
+		
+		if(element.value != secondElement.value){
+			alert('El campo '+ nombreSegundoCampo + ' debe coincidir con el campo ' + nombreCamp);
+			secondElement.focus();
+			throw '';
+		}
+		
+	}
+	
+	function validacionAceptoLosTerminosYCondiciones(element){
+		if(element.checked == 0){
+			alert('Debe aceptar los términos y condiciones');
+			element.focus();
+			throw '';
+		}
+	}
+	
+	/**** FINAL DEFINICION DE FUNCIONES ****/
+	
+	
+	/**** LLAMADO A VALIDACIONES ****/
 	
 	var form = document.getElementById('formularioInscripcion');
 	
 	/*Nombre y Apellido*/
-	if(form.nombreApellido.value.length == 0){
-		alert('Debe completar el campo con su Nombre y Apellido.');
-		form.nombre.focus();
-	}else if(!form.nombreApellido.value.match(letras)){
-			alert('Debe completar Nombre y Apellido omitiendo números o caracteres especiales.');
-			form.nombre.focus();		
-		}
+	validacionLetas(form.nombreApellido, 'Nombre y apellido');
 	
 	/*DNI*/
-	if(form.dni.value.length==0){
-		alert('Debe completar el campo con su DNI.');
-		form.dni.focus();
-	}else if(!form.dni.value.match(numeros)){
-			alert('Ingrese solo números.');
-			form.dni.focus();
-		}else if (form.dni.value.lenght<8){
-			alert('Su número tiene menos dígitos de los que se aceptan.');
-			form.dni.focus();
-		}
+	validacionNumeros(form.dni, 'DNI');
 		
 	/*Email*/
-	if(form.email.value.lenght==0){
-		alert('Debe completar el campo con su casilla de correo.');
-		form.email.focus();		
-	}else if(!form.email.value.match(regexp)){
-			alert('Su Mail no cumple con el formato.');
-			form.email.focus();
-		}
-	
+	validacionMail(form.email, 'E-Mail');
+
 	/*Contraseña*/
-	var contrasena = form.contrasena.value;
-	var contrasenaValidar = form.contrasenaValidar.value;
-	if(contrasena.lenght==0){
-		alert('Debe incresar su contraseña.');
-		form.contrasena.focus();		
-	}else if(contrasenaValidar.length == 0){
-		alert('Debe reingresar su contraseña.');
-		form.contrasenaValidar.focus();		
-	}else if(contrasena != contrasenaValidar){
-			alert('Tiene un error en su contraseña.');
-			form.contrasena.focus();
-	}
-	
+	validacionPassword(form.contrasena, form.contrasenaValidar, 'Contraseña', 'Repetir contraseña');	
+		
 	/*Acepto términos y condiciones*/
-	if(document.getElementById("cb").checked == 0){
-		alert('Debe aceptar los términos y condiciones');
-		document.getElementById('cb').focus();
-	}
+	validacionAceptoLosTerminosYCondiciones(form.aceptoTerminos);
 	
+	/**** FINAL LLAMADO A VALIDACIONES ****/	
+	
+	/* Hago submit */
 	form.submit();
 }
 
