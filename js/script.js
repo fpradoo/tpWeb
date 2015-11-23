@@ -1,3 +1,25 @@
+function mostrarOcultar(id){
+	if(id == 1){
+		if($('#2').is(":visible")){
+			$('#2').hide("fast");
+			$('#3').hide("fast");
+			$('#4').hide("fast");
+			$('#5').hide("fast");
+		}else{
+			$('#2').show("fast");
+			$('#3').show("fast");
+			$('#4').show("fast");
+			$('#5').show("fast");
+		}	
+	}else{
+		if($('#6').is(":visible")){
+			$('#6').hide("slow");
+		}else{
+			$('#6').show("slow");
+		}
+	}
+}
+
 function mostrarCurso(curso){
 
 	switch(curso) {

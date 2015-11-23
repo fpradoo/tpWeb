@@ -4,6 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8 "/>
 		<title>Capinfo - Instituto de Capacitación Informática</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
@@ -12,18 +14,24 @@
 				<img title="CAPINFO - Instituto de Capacitación Informática" src="img/logo.png"/>
 				<h1>Instituto de Capacitación Informática</h1>
 			</a>
-			<div id="menuIndex" style='display:none'><div>z</div>
+			<div id="menuIndex">
+				<li class="muestra" id="1" onclick='mostrarOcultar(this.id)'>Z</li>
 				<ul>
-					<li><a href="#">Historia</a></li>
-					<li><a href="#">Cursos</a></li>
-					<li><a href="#">Inscripciones</a></li>
-					<li class="contacto"><a href="#"><span>b</span>Contacto</a></li>
+					<li style='display:none;' id='2'><a href="historia.html">Historia</a></li>
+					<li style='display:none;' id='3'><a href="cursos.html">Cursos</a></li>
+					<li style='display:none;' id='4'><a href="inscripcion.html">Inscripciones</a></li>
+					<li style='display:none;' id='5' class="contacto"><a href="contacto.html"><span>b</span>Contacto</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class='formularios section'>
+		
+		<div class='tit-inscripcion'>
 			<h1 class='titleInscripciones'>Inscripciones</h1>
 			<p class="aclaracion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+		</div>
+		
+		<div class='formularios section'>
+
 			<div class='curso'>
 				<select onchange='mostrarCurso(this.value)'>
 					<option value="">Seleccione un curso</option>
@@ -96,16 +104,16 @@
 			</div>
 		</div>
 		
-		<div class="footer" style='display:none'>
-			<ul>Derechos reservados.</ul>
-			
+		<div class="footer">
 			<ul>
 			<p>Mapa del sitio</p>
-				<li><a href="#">Historia</a></li>
+				<li><a href="historia.html">Historia</a></li>
 				<li><a href="#">Cursos</a></li>
-				<li><a href="#">Inscripciones</a></li>
+				<li><a href="inscripciones.html">Inscripciones</a></li>
 				<li><a href="#">Contacto</a></li>
 			</ul>
+			<ul>Derechos reservados.</ul>
+			<ul>Acosta, M. Florencia - 35945643<br/>Prado, Fernando - xxxxxxxx</ul>			
 		</div>
 		
 	</body>

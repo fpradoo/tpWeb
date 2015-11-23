@@ -48,10 +48,17 @@ div.header{
 	border-top: solid 8px #EA7006;
 	background-color: #873188;
 	max-width: 100%;
-	height: 1.8em;
+	height: 2.5em;
 	padding: 0.5em 1em;
 	position: relative;
 	z-index: 1000;
+    margin-bottom: 3%;
+}
+
+div.header>a {
+    display: inline-block;
+    position: relative;
+    top: 0.4em;
 }
 
 div.header>a>img{
@@ -66,15 +73,24 @@ div#menuIndex {
 	position: absolute;
 	z-index: 100000;
 	right: 3em;
+    top: 0em;
 }
 
-div#menuIndex>div{
+#menuIndex>li.muestra {
     font-family: 'modern_pictogramsnormal';
+    color: #EA7006;
+    cursor: pointer;
+    font-size: 3.5em !important;
+    padding: 0 !important;
+    top: -.25em;
+    position: relative;
+    text-align: center;
 }
 
 #menuIndex>ul{
-	background-color: #F2F2F2;
+    background-color: #F2F2F2;
     min-width: 10em;
+    position: relative;
 }
 
 #menuIndex>ul>li{
@@ -112,6 +128,7 @@ div#menuIndex>div{
 /*MAIN*/
 div.main {
 	margin: 0em 1em;
+    margin-bottom: 3em;
 }
 
 
@@ -124,7 +141,6 @@ div#slider>ul>li>img {
 }
 
 div.section>ul { /* secciones- Noticias, Tutoriales y Extras */
-	float: left;
 	background-color: white;
 	padding: 1em;
 }
@@ -146,6 +162,10 @@ ul.promo, ul.redes, ul.articulo, ul.tutoriales{
     box-shadow: -3px 4px 2px #EFEFEF;
     -webkit-box-shadow: -3px 4px 2px #EFEFEF;
     -moz-box-shadow: -3px 4px 2px #EFEFEF;
+}
+
+ul.tutoriales>a {
+    display: flex;
 }
 
 ul>a:hover { 
@@ -216,37 +236,31 @@ li.video>img {
 /*FIN MAIN*/
 
 /*FOOTER*/
-div.footer {
-	background-color: white;
-	margin-top: 2em;
-	width: 76%;
-	display: inline-block;
-	padding: 12%;
+
+.footer {
+    background-color: #ECECEC;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 3em;
+    color: #B1B1B1;
 }
 
-div.footer>ul {
-	color: #656565;
-	margin: 1em 0em;
-	text-align: center;
+.footer ul {
+    width: 50%;
+    padding: .5em;
 }
 
-div.footer>ul>p {
-	padding-bottom: 0.5em;
-	text-transform: uppercase;
-	width: 7em;
-	margin: 0 auto;
-	border-bottom: solid 1px #656565;
-	margin-bottom: 0.5em;
+.footer ul li {
+    padding-left: 2em;
+    margin: .5em 0em;
 }
 
-div.footer>ul>li{
-	padding: 0.1em 0em;
+.footer ul li a {
+    color: #B1B1B1;
 }
 
-div.footer>ul>li>a {
-    color: #7F7F7F;
-	text-align: left;
-}
+
 /*FIN FOOTER*/
 
 /* HISTORIA */
@@ -255,10 +269,15 @@ div.section {
     width: 90%;
     margin: 0% 5%;
     color: #4C4C4C;
+    margin-bottom: 3em;
 }
 
 div.fotoLeft {
     max-width: 100%;
+}
+
+div.fotoLeft>h2 {
+    margin-bottom: .5em;
 }
 
 img.fotoHistoria {
@@ -287,13 +306,18 @@ div.items ul {
 div.items ul li{
 	list-style-type: disc;
 	font-size: 1.2em;
+	padding: .2em 0;
 }
 
 /*Fin HISTORIA*/
 
 /*INSCRIPCIONES*/
+div.tit-inscripcion {
+    width: 90%;
+    margin: 0% 5%;
+}
+
 h1.titleInscripciones {
-    margin-top: 1em;
     color: #4C4C4C;
     font-size: 2.5em;
 }
@@ -419,6 +443,112 @@ p#efectivo {
 }
 /*FIN INSCRIPCIONES*/
 
+/*CURSOS*/
+ul.noticias h2 {
+	margin-bottom: 0.5em;
+}
+
+div.explicacion p {
+    line-height: 1.5;
+}
+/*FIN CURSOS*/
+
+/*CONTACTO*/
+div.mapa-sede-principal div, div.contacto-sedes div {
+    width: 100%;
+}
+
+div.map-central {
+    height: 31em;
+    position: relative;
+}
+
+div.mapa-sede-principal h2 {
+    margin-bottom: 1em;
+}
+
+div.info h2 {
+    margin-bottom: .2em;
+    font-size: 2em;
+}
+
+div.info-central {
+    font-size: 130%;
+}
+
+.sedes {
+    background: white;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+div.info h3 {
+    margin-top: 1em;
+    background: #EA7006;
+    color: white;
+    padding: 3%;
+    width: 94%;
+}
+
+div.datos-subsedes h4 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+
+div.datos-subsedes>div {
+    font-size: 120%;
+}
+
+div.map-subsede {
+    margin-top: 1em;
+}
+
+div i {
+    padding-top: .5em;
+    display: inline-block;
+}
+
+/*map-area*/
+div.map-central input[type="button"] {
+    position: absolute;
+    background: url("/img/mapa/map-17.png") no-repeat center;
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.central {
+    right: 8em;
+    top: 4em;
+    background-color: transparent !important;
+    background: url("/img/mapa/map.png") center no-repeat !important;
+    width: 4em !important;
+    height: 8em !important;
+}
+
+.palermo{
+	right: 4em;
+	top: 14em;
+}
+
+.avellaneda{
+    right: 11em;
+    top: 17em;
+}
+
+.recoleta{
+    right: 25em;
+    top: 12em;
+}
+
+.moron{
+    left: 5em;
+    top: 19em;
+}
+
+/*FIN CONTACTO*/
+
 
 /*Responsive*/
 @media screen and (min-width: 30em) {
@@ -428,6 +558,7 @@ div.header{
 
 div.main {
 	margin: 0em 3em;
+    margin-bottom: 3em;
 }
 
 li.video>img {
@@ -438,16 +569,6 @@ li.video>p {
 	max-width: 45%;
 	display: inline-block;
 	float: right;
-}
-
-div.footer {
-    width: 90%;
-    padding: 5%;
-}
-
-div.footer>ul {
-	width: 50%;
-	float: left;
 }
 }
 
@@ -460,17 +581,20 @@ div.header>a>h1{
 	text-transform: uppercase;;
 }
 
-div.section>ul {
-    max-width: 30%;
+div.section {
+	display: flex;
+}
+
+li.video { /* secciones- Tutoriales */
+	display: block;
 }
 
 div.section>ul.tutoriales {
     margin: 0em 0.8%;
 }
 
-div.footer {
-    width: 95%;
-    padding: 2.5%;
+ul>a:hover {
+    display: block;
 }
 
 /*INSCRIPCIONES*/
@@ -479,28 +603,35 @@ p.aclaracion{
 }
 
 .formularios>div {
-    width: 27%;
-    float: left;
+    width: 33%;
     margin: 0 1%;
 }
 /*Fin INSCRIPCIONES*/
+
+/*CURSOS*/
+div.explicacion p {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+/*FIN CURSOS*/
+
+/*CONTACTO*/
+div.section>div {
+	width: 50%;
+	margin: 0em 1em;
+}
+/*FIN CONTACTO*/
+
+/*FOOTER*/
+.footer {
+    padding: 2em 10em;
+ }
+/*FIN FOOTER*/
 }
 
 @media screen and (min-width: 65em) {
 /*HISTORIA*/
-div.fotoLeft {
-    width: 45%;
-	display: inline-block;
-}
-
-img.fotoHistoria {
-    width: 95%;
-}
-
-div.info {
-    float: right;
-    width: 55%;
-}
 
 div.items ul{
 	width: 46%;
@@ -508,12 +639,6 @@ div.items ul{
 	margin-left: 4%;
 }
 /*Fin HISTORIA*/
-}
-
-@media screen and (min-width: 75em) {
-div.section>ul.tutoriales {
-    margin: 0em 2%;
-}
 }
 
 
