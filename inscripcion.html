@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset= utf-8 "/>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Capinfo - Instituto de Capacitación Informática</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -36,7 +36,7 @@
 		<div class='formularios section'>
 
 			<div class='curso'>
-				<select onchange='mostrarCurso(this.value)'>
+				<select id='curso' onchange='mostrarCurso(this.value)'>
 					<option value="">Seleccione un curso</option>
 					<option value="curso1">Curso 1</option>
 					<option value="curso2">Curso 2</option>
@@ -96,7 +96,7 @@
 				</form>
 			</div>
 			<div class='medioDePago'>
-				<select onchange='mostrarMedioDePago(this.value)'>
+				<select id='medioDePago' onchange='mostrarMedioDePago(this.value)'>
 					<option value="">Seleccione un medio de pago</option>
 					<option value="tarjeta">Tarjeta de credito</option>
 					<option value="efectivo">Efectivo</option>

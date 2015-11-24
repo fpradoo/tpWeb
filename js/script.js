@@ -92,6 +92,7 @@ function validarFormulario(){
 		if(element.value.length == 0){
 			alert('El campo '+ nombreCamp + ' no puede estar vacio');
 			element.focus();
+			throw '';
 		}		
 	}
 	
@@ -153,6 +154,14 @@ function validarFormulario(){
 		}
 	}
 	
+	function validacionCheckearCombos(element, nombreCamp){
+		if(element.value == ''){
+			alert('Debe elegir un ' + nombreCamp);
+			element.focus();
+			throw '';
+		}
+	}	
+	
 	/**** FINAL DEFINICION DE FUNCIONES ****/
 	
 	
@@ -174,6 +183,17 @@ function validarFormulario(){
 		
 	/*Acepto términos y condiciones*/
 	validacionAceptoLosTerminosYCondiciones(form.aceptoTerminos);
+	
+	/*Elegir un combo de curso*/
+	validacionCheckearCombos(document.getElementById('curso'), 'curso');
+	
+	/*Elegir un combo de medio de pago*/
+	validacionCheckearCombos(document.getElementById('medioDePago'), 'medio de pago');
+	
+	if(document.getElementById('medioDePago').value != '' && document.getElementById('medioDePago').value != 'efectivo'){
+		validacionNumeros(document.getElementById('tarjetaCreditoInput'), 'número de tarjeta');
+	}
+	
 	
 	/**** FINAL LLAMADO A VALIDACIONES ****/	
 	
