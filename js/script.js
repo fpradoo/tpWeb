@@ -5,17 +5,26 @@ function mostrarOcultar(id){
 			$('#3').hide("fast");
 			$('#4').hide("fast");
 			$('#5').hide("fast");
+			$('#6').hide("fast");
+			$('#7').hide("fast");
+			$('#8').hide("fast");
 		}else{
 			$('#2').show("fast");
 			$('#3').show("fast");
 			$('#4').show("fast");
 			$('#5').show("fast");
 		}	
-	}else{
+	}
+	
+	if(id == 4){
 		if($('#6').is(":visible")){
-			$('#6').hide("slow");
+			$('#6').hide("fast");
+			$('#7').hide("fast");
+			$('#8').hide("fast");
 		}else{
-			$('#6').show("slow");
+			$('#6').show("fast");
+			$('#7').show("fast");
+			$('#8').show("fast");
 		}
 	}
 }

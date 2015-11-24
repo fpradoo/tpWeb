@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'modern_pictogramsnormal';
-    src: url('/font/modernpics.eot');
-    src: url('/font/modernpics.eot?#iefix') format('embedded-opentype'),
-         url('/font/modernpics.woff2') format('woff2'),
-         url('/font/modernpics.woff') format('woff'),
-         url('/font/modernpics.ttf') format('truetype'),
-         url('/font/modernpics.svg#modern_pictogramsnormal') format('svg');
+    src: url('D://www/tpWeb/font/modernpics.eot');
+    src: url('D://www/tpWeb/font/modernpics.eot?#iefix') format('embedded-opentype'),
+         url('D://www/tpWeb/font/modernpics.woff2') format('woff2'),
+         url('D://www/tpWeb/font/modernpics.woff') format('woff'),
+         url('D://www/tpWeb/font/modernpics.ttf') format('truetype'),
+         url('D://www/tpWeb/font/modernpics.svg#modern_pictogramsnormal') format('svg');
     font-weight: normal;
     font-style: normal;
 
