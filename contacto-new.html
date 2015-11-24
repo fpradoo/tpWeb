@@ -25,36 +25,33 @@
 				</ul>
 			</div>
 		</div>
-		<div class="main in">
-			<h2>Cursos</h2>		
-			<div id="slider">
-				<ul>
-					<li><img title="Curso 1" src="img/slider/curso1.jpg"/></li>
-					<li><img title="Curso 2" src="img/slider/curso2.jpg"/></li>
-					<li><img title="Curso 3" src="img/slider/curso3.jpg"/></li>
-					<li><img title="Curso 4" src="img/slider/curso4.jpg"/></li>
-				</ul>
-			</div>
-			
+		<div class="main">
+
 			<div class="section">
-				
-				<ul class="noticias">
-					<h2>Constan de...</h2>
-					<div class="explicacion">
-						<div>
-							<h3>Word Básico, <i>nivel 1</i></h3><p>Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript. Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.</p>
-						</div>
-						<div>
-							<h3>Planillas de cálculo, <i>nivel 3</i></h3><p>Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript. Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.</p>
-						</div>
-						<div>
-							<h3>Power Point, <i>nivel 2</i></h3><p>Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.</p>
-						</div>
-						<div>
-							<h3>Mailing comercial masivo, <i>nivel 1</i></h3></h3><p>Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.Aprende como hacer un atractivo formulario estilo Material Design con HTML, CSS y Javascript.</p>
+				<div class="mapa-sede-principal">
+					<h2>Contacto | Sedes</h2>
+					<div class="map-central">
+						<img src="img/mapa/mapa-no-navegable.jpg" alt="Mapa Caceres" usemap="#mapa1" class="aligncenter size-full wp-image-1252" />
+						<map name="mapa1">
+							<area alt="Pulsar para acceder a Conjunto Hist&oacute;rico" title="Villanueva de la Vera" shape="CIRCLE" coords="678,121,8" href="http://158.49.247.14/caceresvirtual/?page_id=1056#conjunto"></area>
+							<area alt="Pulsar para acceder a Conjunto Hist&oacute;rico" title="Valverde de la Vera" shape="CIRCLE" coords="661,125,8" href="http://158.49.247.14/caceresvirtual/?page_id=1056#artistico"></area>
+						</map>
+					</div>
+				<div class="contacto-sedes">
+					<div class="info">
+						<h2>Sede central</h2>
+						<div class="info-central">Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+						
+						<h3>Subsedes de CAPIF</h2>
+						<div class="sedes">
+							<div class="datos-subsedes">
+								<h4>Palermo</h4>
+								<div>Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+								<div class="map-subsede"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078430645728!2d-58.638410199999996!3d-34.61023485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1448248811491" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+							</div>
 						</div>
 					</div>
-				</ul>
+				</div>
 			</div>
 		</div>
 		<div class="footer">
@@ -70,4 +67,12 @@
 		</div>
 		
 	</body>
+
+	<script src="js/jquery.rwdImageMaps.min.js"></script>
+	<script>
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		
+	});
+</script>
 </html>
