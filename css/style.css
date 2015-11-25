@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'modern_pictogramsnormal';
-    src: url('D://www/tpWeb/font/modernpics.eot');
-    src: url('D://www/tpWeb/font/modernpics.eot?#iefix') format('embedded-opentype'),
-         url('D://www/tpWeb/font/modernpics.woff2') format('woff2'),
-         url('D://www/tpWeb/font/modernpics.woff') format('woff'),
-         url('D://www/tpWeb/font/modernpics.ttf') format('truetype'),
-         url('D://www/tpWeb/font/modernpics.svg#modern_pictogramsnormal') format('svg');
+    src: url('E://WEB-INSTITUTO/font/modernpics.eot');
+    src: url('E://WEB-INSTITUTO/font/modernpics.eot?#iefix') format('embedded-opentype'),
+         url('E://WEB-INSTITUTO/font/modernpics.woff2') format('woff2'),
+         url('E://WEB-INSTITUTO/font/modernpics.woff') format('woff'),
+         url('E://WEB-INSTITUTO/font/modernpics.ttf') format('truetype'),
+         url('E://WEB-INSTITUTO/font/modernpics.svg#modern_pictogramsnormal') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -134,6 +134,10 @@ div#menuIndex {
 #menuIndex>ul>li.contacto>a{
 
 	color: #EA7006;
+}
+
+.child{
+	background-color: #CCCCCC;
 }
 
 /*FIN HEADER*/
@@ -481,6 +485,11 @@ div.map-central {
     position: relative;
 }
 
+.map-central>img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 div.mapa-sede-principal h2 {
     margin-bottom: 1em;
 }
@@ -529,7 +538,7 @@ div i {
 /*map-area*/
 div.map-central input[type="button"] {
     position: absolute;
-    background: url("/img/mapa/map-17.png") no-repeat center;
+    background: url("E://WEB-INSTITUTO/img/mapa/map-17.png") no-repeat center;
     width: 3em;
     height: 3em;
     border-radius: 100%;
@@ -540,7 +549,7 @@ div.map-central input[type="button"] {
     right: 8em;
     top: 4em;
     background-color: transparent !important;
-    background: url("/img/mapa/map.png") center no-repeat !important;
+    background: url("E://WEB-INSTITUTO/img/mapa/map.png") center no-repeat !important;
     width: 4em !important;
     height: 8em !important;
 }
@@ -602,7 +611,7 @@ div.section {
 	display: flex;
 }
 
-div.section>ul {
+div.section>ul.noticias, div.section>ul.tutoriales, div.section>ul.extra{
     width: 33%;
 }
 
@@ -623,6 +632,15 @@ p.aclaracion{
     width: 33%;
     margin: 0 1%;
 }
+
+div.formularios {
+    padding: 0% 5%;
+    box-sizing: border-box;
+}
+
+.curso, .datos, .medioDePago {
+    height: 100%;
+}
 /*Fin INSCRIPCIONES*/
 
 /*CURSOS*/
@@ -639,10 +657,6 @@ div.explicacion p {
 div.section>div {
 	width: 50%;
 	margin: 0em 1em;
-}
-
-div.info div {
-    margin-top: 2em;
 }
 /*FIN CONTACTO*/
 

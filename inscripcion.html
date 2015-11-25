@@ -20,9 +20,10 @@
 					<li style='display:none;' id='2'><a href="historia.html">Historia</a></li>
 					<li style='display:none;' id='3'><a href="cursos.html">Cursos</a></li>
 					<li style='display:none;' id='4' onclick='mostrarOcultar(this.id)'><a href="#">Inscripciones</a></li>
-					<li style='display:none;' id='6'><a href="inscripcion.html">Curso 1</a></li>
-					<li style='display:none;' id='7'><a href="inscripcion.html">Curso 2</a></li>
-					<li style='display:none;' id='8'><a href="inscripcion.html">Curso 3</a></li>
+					<li style='display:none;' class="child" id='6'><a href="inscripcion.html">Word Básico</a></li>
+					<li style='display:none;' class="child" id='7'><a href="inscripcion.html">Mailings</a></li>
+					<li style='display:none;' class="child" id='8'><a href="inscripcion.html">Power Point</a></li>
+					<li style='display:none;' class="child" id='9'><a href="inscripcion.html">Planillas de C.</a></li>
  					<li style='display:none;' id='5' class="contacto"><a href="contacto.html"><span>b</span>Contacto</a></li>
 				</ul>
 			</div>
@@ -30,7 +31,7 @@
 		
 		<div class='tit-inscripcion'>
 			<h1 class='titleInscripciones'>Inscripciones</h1>
-			<p class="aclaracion">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+			<p class="aclaracion">Para asegurar los resultados de nuestros cursos a distancia, CTEC  brinda soporte tutorial por mail con respuesta en no más de 24 horas o asistiendo a cualquiera de nuestras sedes, donde los alumnos pueden  aclarar sus dudas con asistencia de nuestros tutores ó realizar prácticas adicionales que ayuden a su comprensión, asegurando así los objetivos del curso.</p>
 		</div>
 		
 		<div class='formularios section'>
@@ -38,31 +39,39 @@
 			<div class='curso'>
 				<select id='curso' onchange='mostrarCurso(this.value)'>
 					<option value="">Seleccione un curso</option>
-					<option value="curso1">Curso 1</option>
-					<option value="curso2">Curso 2</option>
-					<option value="curso3">Curso 3</option>
+					<option value="curso1">Word Básico</option>
+					<option value="curso2">Planillas de cálculo</option>
+					<option value="curso3">Power Point</option>
+					<option value="curso4">Mailing comercial</option>
 				</select>
 				<div id='curso1'> 
 					<p class='primerTexto'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+						Microsoft dispone de un conjunto de herramientas llamado "Office" que se compone de todo lo necesario para resolver cuantos problemas se presenten en los trabajos propios de cualquier usuario bien a nivel de oficina o doméstico.
 					</p>
 					<h2>$500</h2>
 					<p>10 Clases | 4 Horas x día</p>
 				</div>
 				<div id='curso2'> 
 					<p class='primerTexto'>
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+						Una hoja de cálculo es un tipo de documento, que permite manipular datos numéricos y alfanuméricos dispuestos en forma de tablas compuestas por celdas (las cuales se suelen organizar en una matriz bidimensional de filas y columnas).
 					</p>
 					<h2>$400</h2>
 					<p>8 Clases | 3 Horas x día</p>
 				</div>
 				<div id='curso3'> 
 					<p class='primerTexto'> 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						PowerPoint es uno de los programas de presentación más extendidos. Es ampliamente utilizado en distintos campos de la enseñanza, los negocios, etcétera. Según cifras de Microsoft, cada día son realizadas aproximadamente 30 millones de presentaciones con PowerPoint (PPT).
 					</p>
 					<h2>$300</h2>
 					<p>6 Clases | 2 Horas x día</p>
-				</div>				
+				</div>
+				<div id='curso4'> 
+					<p class='primerTexto'> 
+						El e-mailing) es un método de mercadotecnia directa que utiliza el correo electrónico como medio de comunicación comercial para enviar mensajes a una audiencia. La mercadotecnia directa es un sistema interactivo que utiliza uno o más medios de comunicación para obtener una respuesta medible en un público objetivo. 
+					</p>
+					<h2>$800</h2>
+					<p>10 Clases | 3 Horas x día</p>
+				</div>					
 			</div>
 			<div class='datos'>
 				<form id="formularioInscripcion" name="form" method="POST" action="">
@@ -113,9 +122,9 @@
 			<ul>
 			<p>Mapa del sitio</p>
 				<li><a href="historia.html">Historia</a></li>
-				<li><a href="#">Cursos</a></li>
-				<li><a href="inscripciones.html">Inscripciones</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="cursos.html">Cursos</a></li>
+				<li><a href="inscripcion.html">Inscripciones</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
 			</ul>
 			<ul>Derechos reservados.</ul>
 			<ul>Acosta, M. Florencia - 35945643<br/>Prado, Fernando - xxxxxxxx</ul>			

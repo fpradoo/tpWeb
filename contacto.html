@@ -21,56 +21,62 @@
 					<li style='display:none;' id='2'><a href="historia.html">Historia</a></li>
 					<li style='display:none;' id='3'><a href="cursos.html">Cursos</a></li>
 					<li style='display:none;' id='4' onclick='mostrarOcultar(this.id)'><a href="#">Inscripciones</a></li>
-					<li style='display:none;' id='6'><a href="inscripcion.html">Curso 1</a></li>
-					<li style='display:none;' id='7'><a href="inscripcion.html">Curso 2</a></li>
-					<li style='display:none;' id='8'><a href="inscripcion.html">Curso 3</a></li>
+					<li style='display:none;' class="child" id='6'><a href="inscripcion.html">Word Básico</a></li>
+					<li style='display:none;' class="child" id='7'><a href="inscripcion.html">Mailings</a></li>
+					<li style='display:none;' class="child" id='8'><a href="inscripcion.html">Power Point</a></li>
+					<li style='display:none;' class="child" id='9'><a href="inscripcion.html">Planillas de C.</a></li>
  					<li style='display:none;' id='5' class="contacto"><a href="contacto.html"><span>b</span>Contacto</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="main">
 
-			<div class="section">
-				<div class="mapa-sede-principal" style='float:left;'>
+			<div class="section in">
+				<div class="mapa-sede-principal">
 					<h2>Contacto | Sedes</h2>
 					<div class="map-central">
-					<input class="central" type="button"></input>
-					<input class="palermo" type="button"></input>
-					<input class="recoleta" type="button"></input>
-					<input class="avellaneda" type="button"></input>
-					<input class="moron" type="button"></input>
-					<img src="img/mapa/mapa-no-navegable.jpg" alt="Mapa Caceres" style='width: 630px; float:left' />
-					<div onclick='mostrarMapa(this.id)' id='mapa1' style='position:absolute; background-color:black; width:20px; height:20px; top: 80px; left:93px; cursor:pointer;'></div>
-					<div onclick='mostrarMapa(this.id)' id='mapa2' style='position:absolute; background-color:black; width:20px; height:20px; bottom: 56px; left:117px; cursor:pointer;'></div>
-					<div onclick='mostrarMapa(this.id)' id='mapa3' style='position:absolute; background-color:black; width:20px; height:20px; bottom: 168px; right:241px; cursor:pointer;'></div>									
+						<input title="Capif Central" class="central" type="button"></input>
+						<input title="Sede Devoto" onclick='mostrarMapa(this.id)' id='mapa1' class="palermo" type="button"></input>
+						<input title="Sede Caballito" onclick='mostrarMapa(this.id)' id='mapa2' class="recoleta" type="button"></input>
+						<input title="Sede Recoleta" onclick='mostrarMapa(this.id)' id='mapa3' class="avellaneda" type="button"></input>
+						<input title="Sede Caseros" onclick='mostrarMapa(this.id)' id='mapa4' class="moron" type="button"></input>
+						<img src="img/mapa/mapa-no-navegable.jpg" alt="Sedes Capinfo"/>								
+					</div>
 				</div>
 				<div class="contacto-sedes">
 					<div class="info">
 						<h2>Sede central</h2>
-						<div class="info-central">Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+						<div class="info-central">Av. Juan B. Justo, Palermo. Capital Federal.<br/>Cp.: 25896. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
 						
 						<h3>Subsedes de CAPIF</h2>
-						<div style='display:none;' id='ramos' class="sedes">
+						<div id='ramos' class="sedes">
 							<div class="datos-subsedes">
-								<h4>Ramos</h4>
-								<div>Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+								<h4>Devoto</h4>
+								<div>Av. Lope de Vega 5340, Villa Devoto.<br/>Cp.: 1688. / +(011)4648-2355<br/><i>capif.devoto@capif.com.ar</i></div>
 								<div class="map-subsede"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078430645728!2d-58.638410199999996!3d-34.61023485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1448248811491" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 							</div>
 						</div>
 						<div style='display:none;' id='caballito' class="sedes">
 							<div class="datos-subsedes">
 								<h4>Caballito</h4>
-								<div>Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+								<div>Av. Rivadavia 11040, Caballito.<br/>Cp.: 1387. / +(011)4558-2966<br/><i>capif.caballito@capif.com.ar</i></div>
 								<div class="map-subsede"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078430645728!2d-58.638410199999996!3d-34.61023485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1448248811491" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 							</div>
 						</div>
 						<div style='display:none;' id='ballester' class="sedes">
 							<div class="datos-subsedes">
-								<h4>Ballester</h4>
-								<div>Av. Pirulo 5340, Martinez.<br/>Cp.: 1688. / +(011)4698-2356<br/><i>centralcapif@capif.com.ar</i></div>
+								<h4>Recoleta</h4>
+								<div>Alem 5340, Recoleta.<br/>Cp.: 2088. / +(011)4612-1556<br/><i>capif.recoleta@capif.com.ar</i></div>
 								<div class="map-subsede"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078430645728!2d-58.638410199999996!3d-34.61023485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1448248811491" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 							</div>
 						</div>
+						<div style='display:none;' id='caseros' class="sedes">
+							<div class="datos-subsedes">
+								<h4>Caseros</h4>
+								<div>Av. Don Bosco 52220, Caseros.<br/>Cp.: 1338. / +(011)4128-2332<br/><i>capif.caseros@capif.com.ar</i></div>
+								<div class="map-subsede"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.078430645728!2d-58.638410199999996!3d-34.61023485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1448248811491" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+							</div>
+						</div>						
 					</div>
 				</div>
 			</div>
@@ -79,9 +85,9 @@
 			<ul>
 			<p>Mapa del sitio</p>
 				<li><a href="historia.html">Historia</a></li>
-				<li><a href="#">Cursos</a></li>
-				<li><a href="inscripciones.html">Inscripciones</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><a href="cursos.html">Cursos</a></li>
+				<li><a href="inscripcion.html">Inscripciones</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
 			</ul>
 			<ul>Derechos reservados.</ul>
 			<ul>Acosta, M. Florencia - 35945643<br/>Prado, Fernando - xxxxxxxx</ul>			

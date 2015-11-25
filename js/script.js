@@ -8,6 +8,7 @@ function mostrarOcultar(id){
 			$('#6').hide("fast");
 			$('#7').hide("fast");
 			$('#8').hide("fast");
+			$('#9').hide("fast");
 		}else{
 			$('#2').show("fast");
 			$('#3').show("fast");
@@ -21,10 +22,12 @@ function mostrarOcultar(id){
 			$('#6').hide("fast");
 			$('#7').hide("fast");
 			$('#8').hide("fast");
+			$('#9').hide("fast");
 		}else{
 			$('#6').show("fast");
 			$('#7').show("fast");
 			$('#8').show("fast");
+			$('#9').show("fast");
 		}
 	}
 }
@@ -36,24 +39,35 @@ function mostrarCurso(curso){
         document.getElementById("curso1").style.display="block";
 		document.getElementById("curso2").style.display="none";
 		document.getElementById("curso3").style.display="none";
+		document.getElementById("curso4").style.display="none";
 		document.getElementById("cursoHiddenValue").value = "curso1";
         break;
     case 'curso2':
         document.getElementById("curso2").style.display="block";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso3").style.display="none";
+		document.getElementById("curso4").style.display="none";
 		document.getElementById("cursoHiddenValue").value = "curso2";
         break;
 	case 'curso3':
         document.getElementById("curso3").style.display="block";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso2").style.display="none";
+		document.getElementById("curso4").style.display="none";
 		document.getElementById("cursoHiddenValue").value = "curso3";
+        break;
+	case 'curso4':
+        document.getElementById("curso4").style.display="block";
+		document.getElementById("curso1").style.display="none";
+		document.getElementById("curso2").style.display="none";
+		document.getElementById("curso3").style.display="none";
+		document.getElementById("cursoHiddenValue").value = "curso4";
         break;
 	default:
 		document.getElementById("curso3").style.display="none";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso2").style.display="none";
+		document.getElementById("curso4").style.display="none";
 		document.getElementById("cursoHiddenValue").value = "";
 		break;
 	}
@@ -237,20 +251,29 @@ function mostrarMapa(idMapa){
 	if(idMapa == 'mapa1'){
 		document.getElementById("ballester").style.display="block";
 		document.getElementById("caballito").style.display="none";
+		document.getElementById("caseros").style.display="none";
 		document.getElementById("ramos").style.display="none";
 	}
 	
 	if(idMapa == 'mapa2'){
 		document.getElementById("ramos").style.display="block";
 		document.getElementById("caballito").style.display="none";
+		document.getElementById("caseros").style.display="none";
 		document.getElementById("ballester").style.display="none";
 	}
 	
 	if(idMapa == 'mapa3'){
 		document.getElementById("caballito").style.display="block";
 		document.getElementById("ramos").style.display="none";
+		document.getElementById("caseros").style.display="none";
 		document.getElementById("ballester").style.display="none";
 	}
+	
+	if(idMapa == 'mapa4'){
+		document.getElementById("caseros").style.display="block";
+		document.getElementById("ramos").style.display="none";
+		document.getElementById("ballester").style.display="none";
+	}	
 }
 
 
