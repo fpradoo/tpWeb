@@ -36,21 +36,25 @@ function mostrarCurso(curso){
         document.getElementById("curso1").style.display="block";
 		document.getElementById("curso2").style.display="none";
 		document.getElementById("curso3").style.display="none";
+		document.getElementById("cursoHiddenValue").value = "curso1";
         break;
     case 'curso2':
         document.getElementById("curso2").style.display="block";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso3").style.display="none";
+		document.getElementById("cursoHiddenValue").value = "curso2";
         break;
 	case 'curso3':
         document.getElementById("curso3").style.display="block";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso2").style.display="none";
+		document.getElementById("cursoHiddenValue").value = "curso3";
         break;
 	default:
 		document.getElementById("curso3").style.display="none";
 		document.getElementById("curso1").style.display="none";
 		document.getElementById("curso2").style.display="none";
+		document.getElementById("cursoHiddenValue").value = "";
 		break;
 	}
 }
@@ -67,6 +71,7 @@ function mostrarMedioDePago(medioDePago){
         document.getElementById("tarjetaCreditoLabel").style.display="none";
 		document.getElementById("tarjetaCreditoInput").style.display="none";
 		document.getElementById("efectivo").style.display="block";
+		document.getElementById("medioDePagoHiddenValue").value = "efectivo";
         break;
 	default:
         document.getElementById("tarjetaCreditoLabel").style.display="none";
@@ -74,6 +79,10 @@ function mostrarMedioDePago(medioDePago){
 		document.getElementById("efectivo").style.display="none";
 		break;
 	}
+}
+
+function guardarValorDeTarjetaDeCreditoEnFormulario(val){
+	document.getElementById("medioDePagoHiddenValue").value = val;
 }
 
 function validarFormulario(){
@@ -96,20 +105,41 @@ function validarFormulario(){
 		}		
 	}
 	
-	function validacionLetas(element, nombreCamp){
+	function validacionLargo(element, nombreCamp, min, max){
+		
+		if(max != ''){
+			if(element.value.length > max){
+				alert('El campo '+ nombreCamp + ' no puede tener m\u00e1s de ' + max + ' caracteres');
+				element.focus();
+				throw '';
+			}
+		}
+		
+		if(min != ''){	
+			if(element.value.length < min){
+				alert('El campo '+ nombreCamp + ' no puede tener menos de ' + min + ' caracteres');
+				element.focus();
+				throw '';
+			}
+		}	
+	}
+	
+	function validacionLetas(element, nombreCamp, min, max){
 		
 		validacionNulo(element, nombreCamp);
+		validacionLargo(element, nombreCamp, min, max);
 		
 		if(!element.value.match(letras)){
-			alert('El campo '+ nombreCamp + ' no puede contener numeros');
+			alert('El campo '+ nombreCamp + ' no puede contener n\u00fameros');
 			element.focus();
 			throw '';
 		}
 		
 	}
 	
-	function validacionNumeros(element, nombreCamp){
+	function validacionNumeros(element, nombreCamp, min, max){
 		validacionNulo(element, nombreCamp);
+		validacionLargo(element, nombreCamp, min, max);
 		
 		if(!element.value.match(numeros)){
 			alert('El campo '+ nombreCamp + ' no puede contener letras');
@@ -119,8 +149,9 @@ function validarFormulario(){
 		
 	}	
 	
-	function validacionMail(element, nombreCamp){
+	function validacionMail(element, nombreCamp, min, max){
 		validacionNulo(element, nombreCamp);
+		validacionLargo(element, nombreCamp, min, max);
 		
 		if(!element.value.match(mail)){
 			alert('El campo '+ nombreCamp + ' no cumple con el formato esperado');
@@ -129,8 +160,9 @@ function validarFormulario(){
 		}
 	}
 	
-	function validacionPassword(element, secondElement, nombreCamp, nombreSegundoCampo){
+	function validacionPassword(element, secondElement, nombreCamp, nombreSegundoCampo, min, max){
 		validacionNulo(element, nombreCamp);
+		validacionLargo(element, nombreCamp, min, max);
 		
 		if(!element.value.match(pass)){
 			alert('El campo '+ nombreCamp + ' no cumple con el formato esperado');
@@ -148,7 +180,7 @@ function validarFormulario(){
 	
 	function validacionAceptoLosTerminosYCondiciones(element){
 		if(element.checked == 0){
-			alert('Debe aceptar los términos y condiciones');
+			alert('Debe aceptar los t\u00e9rminos y condiciones');
 			element.focus();
 			throw '';
 		}
@@ -170,16 +202,16 @@ function validarFormulario(){
 	var form = document.getElementById('formularioInscripcion');
 	
 	/*Nombre y Apellido*/
-	validacionLetas(form.nombreApellido, 'Nombre y apellido');
+	validacionLetas(form.nombreApellido, 'Nombre y apellido', 10, 30);
 	
 	/*DNI*/
-	validacionNumeros(form.dni, 'DNI');
+	validacionNumeros(form.dni, 'DNI', 8, 10);
 		
 	/*Email*/
-	validacionMail(form.email, 'E-Mail');
+	validacionMail(form.email, 'E-Mail', 6, 30);
 
 	/*Contraseña*/
-	validacionPassword(form.contrasena, form.contrasenaValidar, 'Contraseña', 'Repetir contraseña');	
+	validacionPassword(form.contrasena, form.contrasenaValidar, 'Contraseña', 'Repetir contraseña', 6, 16);	
 		
 	/*Acepto términos y condiciones*/
 	validacionAceptoLosTerminosYCondiciones(form.aceptoTerminos);

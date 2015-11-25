@@ -12,7 +12,7 @@
 		<div class="header" >
 			<a href="index.html">
 				<img title="CAPINFO - Instituto de CapacitaciÃ³n InformÃ¡tica" src="img/logo.png"/>
-				<h1>Instituto de CapacitaciÃ³n InformÃ¡tica</h1>
+				<h1>Instituto de Capacitación Informática</h1>
 			</a>
 			<div id="menuIndex">
 				<li class="muestra" id="1" onclick='mostrarOcultar(this.id)'>Z</li>
@@ -47,21 +47,21 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
 					</p>
 					<h2>$500</h2>
-					<p>10 Clases | 4 Horas x dÃ­a</p>
+					<p>10 Clases | 4 Horas x día</p>
 				</div>
 				<div id='curso2'> 
 					<p class='primerTexto'>
 						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
 					</p>
 					<h2>$400</h2>
-					<p>8 Clases | 3 Horas x dÃ­a</p>
+					<p>8 Clases | 3 Horas x día</p>
 				</div>
 				<div id='curso3'> 
 					<p class='primerTexto'> 
 						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 					</p>
 					<h2>$300</h2>
-					<p>6 Clases | 2 Horas x dÃ­a</p>
+					<p>6 Clases | 2 Horas x día</p>
 				</div>				
 			</div>
 			<div class='datos'>
@@ -75,18 +75,20 @@
 					<label id=''>E-mail</label>
 					<input name="email" id='' type='text' />
 
-					<label id=''>ContraseÃ±a</label>
+					<label id=''>Contraseña</label>
 					<input name="contrasena" id='' type='password' />
 
-					<label id=''>Repita la contraseÃ±a</label>
+					<label id=''>Repita la contraseña</label>
 					<input name="contrasenaValidar" id='' type='password' />
 
 					<div class='checkDiv'>
 						<input name="aceptoTerminos" id="cb" type="checkbox" style="float: left; margin-top: 5px;">
 						<div class='textoCheck'>
-							&nbsp;&nbsp;Acepto los tÃ©rminos y condiciones del sitio.
+							&nbsp;&nbsp;Acepto los términos y condiciones del sitio.
 						</div>
 					</div>
+					<input type='hidden' id='cursoHiddenValue'></input>
+					<input type='hidden' id='medioDePagoHiddenValue'></input>
 					<div class='divBotones'>  
 						<input id='enviar' type='button' value='Enviar' onclick='validarFormulario()' />
 						<input id='limpiar' type='reset' value='Limpiar' />
@@ -101,9 +103,9 @@
 					<option value="tarjeta">Tarjeta de credito</option>
 					<option value="efectivo">Efectivo</option>
 				</select>
-				<label id='tarjetaCreditoLabel'>NÃºmero de tarjeta</label>
-				<input id='tarjetaCreditoInput' type='text' />
-				<p id='efectivo'>Abonara el curso el primer dÃ­a de clases</p>	
+				<label id='tarjetaCreditoLabel'>Número de tarjeta</label>
+				<input onchange='guardarValorDeTarjetaDeCreditoEnFormulario(this.value)' id='tarjetaCreditoInput' type='text' />
+				<p id='efectivo'>Abonara el curso el primer día de clases</p>	
 			</div>
 		</div>
 		
