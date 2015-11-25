@@ -233,4 +233,24 @@ function validarFormulario(){
 	form.submit();
 }
 
+function mostrarMapa(idMapa){
+	if(idMapa == 'mapa1'){
+		document.getElementById("ballester").style.display="block";
+		document.getElementById("caballito").style.display="none";
+		document.getElementById("ramos").style.display="none";
+	}
+	
+	if(idMapa == 'mapa2'){
+		document.getElementById("ramos").style.display="block";
+		document.getElementById("caballito").style.display="none";
+		document.getElementById("ballester").style.display="none";
+	}
+	
+	if(idMapa == 'mapa3'){
+		document.getElementById("caballito").style.display="block";
+		document.getElementById("ramos").style.display="none";
+		document.getElementById("ballester").style.display="none";
+	}
+}
+
 
